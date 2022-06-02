@@ -152,6 +152,107 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Python自学7-浮点数和整数以及数字函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/06/02/Python%E8%87%AA%E5%AD%A67-%E6%B5%AE%E7%82%B9%E6%95%B0%E5%92%8C%E6%95%B4%E6%95%B0%E4%BB%A5%E5%8F%8A%E6%95%B0%E5%AD%97%E5%87%BD%E6%95%B0/">Python自学7 浮点数和整数以及数字函数</a>
+    </h1>
+  
+
+        
+        <a href="/2022/06/02/Python%E8%87%AA%E5%AD%A67-%E6%B5%AE%E7%82%B9%E6%95%B0%E5%92%8C%E6%95%B4%E6%95%B0%E4%BB%A5%E5%8F%8A%E6%95%B0%E5%AD%97%E5%87%BD%E6%95%B0/" class="archive-article-date">
+  	<time datetime="2022-06-02T06:54:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="浮点数相关公式"><a href="#浮点数相关公式" class="headerlink" title="浮点数相关公式"></a>浮点数相关公式</h3><p>若直接输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=1</span><br><span class="line"></span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+<p>则出来结果是 1</p>
+<p>若输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=1.0</span><br><span class="line"></span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+
+<p>则出来结果是 1.0</p>
+<p>带小数点的结果都是浮点数。  </p>
+<p>当整个运算中包含浮点数时，结果会以浮点数的方式呈现</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a=1.0</span><br><span class="line"></span><br><span class="line">b=2</span><br><span class="line"></span><br><span class="line">print(a+b)</span><br></pre></td></tr></table></figure>
+
+<p>结果是 3.0</p>
+<p>当运算为除的时候，不管输入为整数还是浮点数，结果都为浮点数。  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a=6</span><br><span class="line"></span><br><span class="line">b=3</span><br><span class="line"></span><br><span class="line">print(a/b)</span><br></pre></td></tr></table></figure>
+<p>结果为 2.0  </p>
+<p>整除算式为两个除号 &#x2F;&#x2F; ，算下来是一个整数  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a=10</span><br><span class="line"></span><br><span class="line">b=3</span><br><span class="line"></span><br><span class="line">print(a//b)</span><br></pre></td></tr></table></figure>
+<p>结果是 3</p>
+<p>转换浮点数和整数，可以通过float()和int()函数来实现转换。<br>想把a这个整数转化为浮点数字：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=1</span><br><span class="line"></span><br><span class="line">print(float(a))</span><br></pre></td></tr></table></figure>
+<p>结果是 1.0<br>想把a这个浮点数转化为整数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=1.6344</span><br><span class="line"></span><br><span class="line">print(int(a))</span><br></pre></td></tr></table></figure>
+<p>结果是 1  </p>
+<hr>
+<h3 id="数字函数"><a href="#数字函数" class="headerlink" title="数字函数"></a>数字函数</h3><p>abs是absolute的缩写，用来导出绝对值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=-1</span><br><span class="line"></span><br><span class="line">print(abs(a))</span><br></pre></td></tr></table></figure>
+<p>结果是 1  </p>
+<p>round是四舍六入五求偶(类似于四舍五入)  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=1.568</span><br><span class="line"></span><br><span class="line">print(round(a))</span><br></pre></td></tr></table></figure>
+<p>结果是 2</p>
+<p>ceil需要用到python官方的脚本math，意为找到大于目前这个值的最小整数  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import math</span><br><span class="line"></span><br><span class="line">a=4.645367</span><br><span class="line"></span><br><span class="line">print(math.ceil(a))</span><br></pre></td></tr></table></figure>
+<p>结果为 5</p>
+<p>floor与ceil相反，找到小于目前这个值的最大整数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import math</span><br><span class="line"></span><br><span class="line">a=4.645367</span><br><span class="line"></span><br><span class="line">print(math.floor(a))</span><br></pre></td></tr></table></figure>
+<p>结果是 4   </p>
+<p>pow是进行幂次运算，power的缩写  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=2.654</span><br><span class="line"></span><br><span class="line">print(pow(a,3))</span><br></pre></td></tr></table></figure>
+<p>意为a这个数值的三次方，结果为 18.694022263999997</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/06/02/Python%E8%87%AA%E5%AD%A67-%E6%B5%AE%E7%82%B9%E6%95%B0%E5%92%8C%E6%95%B4%E6%95%B0%E4%BB%A5%E5%8F%8A%E6%95%B0%E5%AD%97%E5%87%BD%E6%95%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-花与花-1-5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
